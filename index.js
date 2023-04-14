@@ -11,13 +11,13 @@ const puppeteer = require('puppeteer');
 
         for (let i = 0; i < events.length; i++) {
             array.push({
-                title: events[i].querySelector("ProductDetail").innerText,
+                title: events[i].querySelector("ProductDetail").innerText, // classnames can be found on the website (f12)
                 description: events[i].querySelector("desc").innerText,
                 dates: events[i].querySelector("dates").innerText
             })
         }
 
-        return;
+        return array;
     })
 
     console.log(data);
